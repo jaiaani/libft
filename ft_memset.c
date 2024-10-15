@@ -6,18 +6,17 @@
 /*   By: jados-sa <jados-sa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/25 19:17:19 by jados-sa          #+#    #+#             */
-/*   Updated: 2024/09/25 20:06:19 by jados-sa         ###   ########.fr       */
+/*   Updated: 2024/10/15 20:13:11 by jados-sa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
 
 void	*ft_memset(void *dest, int c, size_t count)
 {
-	size_t	i;
+	size_t			i;
 	unsigned char	*d;
 
 	d = (unsigned char *) dest;
-
 	i = 0;
 	while (i <= count - 1)
 	{
@@ -26,7 +25,6 @@ void	*ft_memset(void *dest, int c, size_t count)
 	}
 	return (d);
 }
-
 /*#include <memory.h>
 #include <stdio.h>
 
