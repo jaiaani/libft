@@ -6,7 +6,7 @@
 /*   By: jaiane <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/15 22:47:23 by jaiane            #+#    #+#             */
-/*   Updated: 2024/10/15 22:56:04 by jaiane           ###   ########.fr       */
+/*   Updated: 2024/10/16 00:39:54 by jaiane           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 /* To run the tests you must have your lib implemented.
@@ -20,7 +20,7 @@
 #include <string.h>
 #include <assert.h>
 
-int main(void)
+void    ft_isalpha_test()
 {
     printf("\n--- ft_isalpha ---\n");
     printf("Testing alphabetic characters\n");
@@ -32,7 +32,10 @@ int main(void)
     assert(ft_isalpha('@') == 0 && "Error: '@' should not be alphabetic");
     printf("ft_isalpha passed all tests!\n");
     printf("------------------\n");
+}
 
+void    ft_isdigit_test()
+{
     printf("\n--- ft_isdigit ---\n");
     printf("Testing digit characters\n");
     assert(ft_isdigit('2') == 1 && "Error: '2' should be a digit");
@@ -42,7 +45,10 @@ int main(void)
     assert(ft_isdigit('+') == 0 && "Error: '+' should not be a digit");
     printf("ft_isdigit passed all tests!\n");
     printf("------------------\n");
+}
 
+void    ft_isalnum_test()
+{
     printf("\n--- ft_isalnum ---\n");
     printf("Testing alphanumeric characters\n");
     assert(ft_isalnum('2') == 1 && "Error: '2' should be alphanumeric");
@@ -53,10 +59,13 @@ int main(void)
     assert(ft_isalnum('%') == 0 && "Error: '%' should not be alphanumeric");
     printf("ft_isalnum passed all tests!\n");
     printf("------------------\n");
+}
 
-    printf("\n--- ft_isascii ---\n");
+void    ft_isascii_test()
+{
+        printf("\n--- ft_isascii ---\n");
     for (int ch = 0x7c; ch <= 0x82; ch++)
-    {
+        {
         printf("Testing character: %#04x\n", ch);
         if (ch <= 0x7F)
         {
@@ -69,7 +78,10 @@ int main(void)
     }
     printf("ft_isascii passed all tests!\n");
     printf("------------------\n");
+}
 
+void    ft_isprint_test()
+{
     printf("\n--- ft_isprint ---\n");
     printf("Testing printable characters\n");
     assert(ft_isprint('k') == 1 && "Error: 'k' should be printable");
@@ -80,14 +92,20 @@ int main(void)
     assert(ft_isprint('\n') == 0 && "Error: newline should not be printable");
     printf("ft_isprint passed all tests!\n");
     printf("------------------\n");
+}
 
+void    ft_strlen_test()
+{
     printf("\n--- ft_strlen ---\n");
     printf("Testing string length calculation\n");
     assert(ft_strlen("BANANA") == 6 && "Error: 'BANANA' should have length 6");
     assert(ft_strlen("") == 0 && "Error: empty string should have length 0");
     printf("ft_strlen passed all tests!\n");
     printf("------------------\n");
+}
 
+void    ft_memset_test()
+{
     printf("\n--- ft_memset ---\n");
     int numbuffer[] = {1, 2, 3, 4};
     char buffer[] = "This is a test of the memset function";
@@ -107,7 +125,10 @@ int main(void)
     }
     printf("\nft_memset passed all tests!\n");
     printf("------------------\n");
+}
 
+void    ft_bzero_test()
+{
     printf("\n--- ft_bzero ---\n");
     char b_zeroBuffer[] = "Delete me, now I am free!";
     printf("Before bzero: %s\n", b_zeroBuffer);
@@ -119,6 +140,56 @@ int main(void)
     printf("------------------\n");
 
     printf("\nAll tests passed successfully!\n");
+}
+
+void	ft_strlcpy_test()
+{
+	printf("\n--- ft_strlcpy ---\n");
+
+	char dest[20];
+	const char *src = "Hello, World!";
+	size_t	src_len;
+    
+	printf("Test 1: Copy full string with buffer = sizeof(dest)\n");
+    	src_len = ft_strlcpy(dest, src, sizeof(dest));
+    	printf("Source length: %zu, Destination: %s\n", src_len, dest);
+    	assert(src_len == strlen(src) && "Error: Length should be equal to the length of source string");
+    	assert(strcmp(dest, src) == 0 && "Error: Destination should match source string");
+
+    	printf("Test 2: Truncated copy with size = 6\n");
+    	size_t small_buf_size = 6; 
+    	src_len = ft_strlcpy(dest, src, small_buf_size);
+    	printf("Source length: %zu, Destination: %s\n", src_len, dest);
+    	assert(src_len == strlen(src) && "Error: Length should be equal to the length of source string");
+    	assert(strncmp(dest, src, small_buf_size - 1) == 0 && "Error: Destination should match truncated source string");
+    	assert(dest[small_buf_size - 1] == '\0' && "Error: Destination should be null-terminated");
+
+    	printf("Test 3: Buffer size is zero\n");
+    	src_len = ft_strlcpy(dest, src, 0);
+    	printf("Source length: %zu, Destination: %s\n", src_len, dest);
+    	assert(src_len == strlen(src) && "Error: Length should be equal to the length of source string");
+    	assert(dest[0] != '\0' && "Error: Destination should not be modified when buffer size is 0");
+
+    	printf("Test 4: Copy empty source string\n");
+    	const char *empty_src = "";
+    	src_len = ft_strlcpy(dest, empty_src, sizeof(dest));
+    	printf("Source length: %zu, Destination: %s\n", src_len, dest);
+    	assert(src_len == 0 && "Error: Length should be 0 for empty source string");
+    	assert(strcmp(dest, empty_src) == 0 && "Error: Destination should match empty source string");
+
+    	printf("\nAll ft_strlcpy tests passed!\n");
+}
+
+int main(void)
+{
+    ft_isalpha_test();
+    ft_isdigit_test();
+    ft_isascii_test();
+    ft_isprint_test();
+    ft_strlen_test();
+    ft_memset_test();
+    ft_bzero_test();
+    ft_strlcpy_test();
     return 0;
 }
 

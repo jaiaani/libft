@@ -6,7 +6,7 @@
 /*   By: jados-sa <jados-sa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/14 18:24:23 by jados-sa          #+#    #+#             */
-/*   Updated: 2024/10/15 20:07:23 by jados-sa         ###   ########.fr       */
+/*   Updated: 2024/10/15 23:33:03 by jaiane           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,5 +23,6 @@ int	ft_isprint(char c);
 size_t	ft_strlen(const char *str);
 void	*ft_memset(void *dest, int c, size_t count);
 void	ft_bzero(void *s, size_t n);
+size_t	ft_strlcpy(char *dest, const char *src, size_t size);
 
 #endif //LIBFT_H
