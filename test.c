@@ -6,7 +6,7 @@
 /*   By: jados-sa <jados-sa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/15 00:06:39 by jados-sa          #+#    #+#             */
-/*   Updated: 2024/10/15 20:04:31 by jados-sa         ###   ########.fr       */
+/*   Updated: 2024/10/15 22:42:04 by jaiane           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,7 +79,13 @@ int	main(void)
   		printf("%i ", numbuffer[i]);
 	}
 
-
+	printf("\n--- ft_bzero ---\n");
+        char b_zeroBuffer[] = "Delete me, now I am free!";
+	printf("When looking n bytes ahead on the buffer pointer should show:' now I am free!'");
+        printf("Initial: %s\n", b_zeroBuffer);
+        ft_bzero(b_zeroBuffer, 10);
+        printf("After: %s\n", b_zeroBuffer);
+        printf("Looking 10 spaces on the memory ahead...: %s", b_zeroBuffer+10);
 
 	return(0);
 }

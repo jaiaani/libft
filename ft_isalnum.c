@@ -1,28 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isascii.c                                       :+:      :+:    :+:   */
+/*   ft_isalnum.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jados-sa <jados-sa@student.42.fr>          +#+  +:+       +#+        */
+/*   By: jaiane <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/25 18:58:37 by jados-sa          #+#    #+#             */
-/*   Updated: 2024/10/15 22:24:27 by jaiane           ###   ########.fr       */
+/*   Created: 2024/10/15 22:19:51 by jaiane            #+#    #+#             */
+/*   Updated: 2024/10/15 22:21:59 by jaiane           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+//checks for an alphanumeric character; 
+
 #include "libft.h"
 
-int	ft_isascii(unsigned char c)
+int	ft_isalnum(char c)
 {
-	if (c > 0 && c <= 127)
+	if (ft_isalpha(c) || ft_isdigit(c))
 		return (1);
-	return (0);
+	return (0);	
 }
-
-/*#include <stdio.h>
-#include <ctype.h>
-
-int	main(void)
-{
-	printf("%d\n", ft_isascii(127));
-	printf("%d\n", isascii(127));
-}*/

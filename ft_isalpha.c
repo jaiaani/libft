@@ -1,28 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isascii.c                                       :+:      :+:    :+:   */
+/*   ft_isalpha.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jados-sa <jados-sa@student.42.fr>          +#+  +:+       +#+        */
+/*   By: jaiane <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/25 18:58:37 by jados-sa          #+#    #+#             */
-/*   Updated: 2024/10/15 22:24:27 by jaiane           ###   ########.fr       */
+/*   Created: 2024/10/15 22:15:37 by jaiane            #+#    #+#             */
+/*   Updated: 2024/10/15 22:19:20 by jaiane           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include "libft.h"
+// checks for an alphabetic character 
 
-int	ft_isascii(unsigned char c)
+#include "libft.h"
+int	ft_isalpha(char c)
 {
-	if (c > 0 && c <= 127)
+	if ((c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z'))
 		return (1);
 	return (0);
 }
-
-/*#include <stdio.h>
-#include <ctype.h>
-
-int	main(void)
-{
-	printf("%d\n", ft_isascii(127));
-	printf("%d\n", isascii(127));
-}*/
