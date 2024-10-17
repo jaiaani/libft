@@ -6,7 +6,7 @@
 /*   By: jaiane <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/15 22:47:23 by jaiane            #+#    #+#             */
-/*   Updated: 2024/10/16 00:39:54 by jaiane           ###   ########.fr       */
+/*   Updated: 2024/10/16 19:41:07 by jaiane           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 /* To run the tests you must have your lib implemented.
@@ -180,6 +180,53 @@ void	ft_strlcpy_test()
     	printf("\nAll ft_strlcpy tests passed!\n");
 }
 
+void	ft_strlcat_test()
+{
+	printf("\n--- ft_strlcat ---\n");
+
+    char dest[20];
+    const char *src = "World!";
+
+    printf("Test 1: Concatenate full string with sufficient buffer size\n");
+    strcpy(dest, "Hello, ");
+    size_t len = ft_strlcat(dest, src, sizeof(dest));
+    printf("Source length + dest length: %zu, Destination: %s\n", len, dest);
+    assert(len == (strlen("Hello, ") + strlen(src)) && "Error: The return value should be the combined length of src and dst");
+    assert(strcmp(dest, "Hello, World!") == 0 && "Error: Destination should match concatenated strings");
+
+    printf("Test 2: Truncated concatenation with smaller buffer\n");
+    strcpy(dest, "Hello, ");
+    size_t small_buf_size = 10; 
+    len = ft_strlcat(dest, src, small_buf_size);
+    printf("Source length + dest length: %zu, Destination: %s\n", len, dest);
+    assert(len == (strlen("Hello, ") + strlen(src)) && "Error: The return value should be the combined length of src and dst");
+    assert(strcmp(dest, "Hello, Wo") == 0 && "Error: Destination should be truncated and null-terminated");
+
+    printf("Test 3: Concatenate with empty source string\n");
+    strcpy(dest, "Hello, ");
+    const char *empty_src = "";
+    len = ft_strlcat(dest, empty_src, sizeof(dest));
+    printf("Source length + dest length: %zu, Destination: %s\n", len, dest);
+    assert(len == strlen(dest) && "Error: The return value should be the length of dst since src is empty");
+    assert(strcmp(dest, "Hello, ") == 0 && "Error: Destination should not change when src is empty");
+
+    printf("Test 4: Buffer size is zero\n");
+    strcpy(dest, "Hello, ");
+    len = ft_strlcat(dest, src, 0);
+    printf("Source length + dest length: %zu, Destination: %s\n", len, dest);
+    assert(len == strlen(src) + strlen("Hello, ") && "Error: The return value should be the combined length of src and dst");
+    assert(strcmp(dest, "Hello, ") == 0 && "Error: Destination should not change when size is zero");
+
+    printf("Test 5: Concatenate when destination is empty\n");
+    strcpy(dest, "");
+    len = ft_strlcat(dest, src, sizeof(dest));
+    printf("Source length + dest length: %zu, Destination: %s\n", len, dest);
+    assert(len == strlen(src) && "Error: The return value should be the length of src");
+    assert(strcmp(dest, src) == 0 && "Error: Destination should match source when dst is empty");
+
+    printf("\nAll ft_strlcat tests passed!\n");
+}
+
 int main(void)
 {
     ft_isalpha_test();
@@ -190,6 +237,7 @@ int main(void)
     ft_memset_test();
     ft_bzero_test();
     ft_strlcpy_test();
+    ft_strlcat_test();
     return 0;
 }
 
