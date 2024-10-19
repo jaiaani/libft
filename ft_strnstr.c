@@ -6,7 +6,7 @@
 /*   By: jaiane <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/17 22:14:08 by jaiane            #+#    #+#             */
-/*   Updated: 2024/10/18 02:22:08 by jaiane           ###   ########.fr       */
+/*   Updated: 2024/10/19 02:15:53 by jados-sa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 /* locate a substring in a string
@@ -19,7 +19,7 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
 	size_t	i;
 	size_t	j;
-	unsigned char	*b;
+	char	*b;
 
 	i = 0;
 	b = (char *)big;

@@ -6,7 +6,7 @@
 /*   By: jaiane <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/16 22:23:57 by jaiane            #+#    #+#             */
-/*   Updated: 2024/10/16 22:24:44 by jaiane           ###   ########.fr       */
+/*   Updated: 2024/10/18 22:01:43 by jados-sa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,10 @@
 
 #include "libft.h"
 
-int     ft_toupper(int c)
+int     ft_tolower(int c)
 {
         if (ft_isalpha(c) && c < 91)
                 return (c + 32);
         return (c);
 }
-~ 
+ 
