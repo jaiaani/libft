@@ -6,7 +6,7 @@
 /*   By: jados-sa <jados-sa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/14 18:24:23 by jados-sa          #+#    #+#             */
-/*   Updated: 2024/10/19 04:29:14 by jados-sa         ###   ########.fr       */
+/*   Updated: 2024/10/20 17:58:20 by jados-sa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,5 +29,6 @@ size_t	ft_strlcpy(char *dest, const char *src, size_t size);
 size_t	ft_strlcat(char *dest, const char *src, size_t dest_size);
 char	*ft_strdup(const char *s);
 char	*ft_substr(char const *s, unsigned int start, size_t len);
+char    *ft_strtrim(char const *s1, char const *set);
 
 #endif //LIBFT_H

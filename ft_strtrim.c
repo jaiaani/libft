@@ -6,7 +6,7 @@
 /*   By: jados-sa <jados-sa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/19 03:49:54 by jados-sa          #+#    #+#             */
-/*   Updated: 2024/10/19 04:46:04 by jados-sa         ###   ########.fr       */
+/*   Updated: 2024/10/20 16:47:26 by jados-sa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 /* Allocates with malloc() and returns a copy of 's1' with the characters 
@@ -38,18 +38,18 @@ char	*ft_strtrim(char const *s1, char const *set)
 
 	b = 0;
 	len = ft_strlen(s1);
-	e = ft_strlen(s1);
+	e = ft_strlen(s1) - 1;
 	while (is_set(set, s1[b]))
 		b++;
 	while (is_set(set, s1[e]))
 		e--;
-	qnty = ft_strlen(s1) - (b + e);
-	printf("len: %zu\nb: %zu\ne: %zu\nqty: %zu\n",len, e, b, qnty);
+	qnty = e - b + 1; 
+	printf("b: %zu\ne: %zu\nqty: %zu\nlen: %zu\n", b, e, qnty, len);
 	return (ft_substr(s1, b, qnty));
 }
-
+/*
 int	main(void)
 {
-	printf("%d", is_set("abc", 'b'));
+	printf("is set? %d\n", is_set("abc", 'H'));
 	printf("%s", ft_strtrim("abcbbcaHelloabcbca", "abc"));	
-}
+}*/
