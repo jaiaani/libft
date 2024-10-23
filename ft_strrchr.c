@@ -6,7 +6,7 @@
 /*   By: jaiane <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/16 22:44:43 by jaiane            #+#    #+#             */
-/*   Updated: 2024/10/16 22:57:28 by jaiane           ###   ########.fr       */
+/*   Updated: 2024/10/22 00:47:50 by jaiane           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 /* String scanning operation
@@ -17,7 +17,7 @@
 char	*ft_strrchr(const char *s, int c)
 {
 	char	chr;
-	size_t	i;
+	int	i;
 
 	chr = (char)c;
 	i = ft_strlen(s) + 1;

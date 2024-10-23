@@ -6,7 +6,7 @@
 /*   By: jados-sa <jados-sa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/14 18:24:23 by jados-sa          #+#    #+#             */
-/*   Updated: 2024/10/20 17:58:20 by jados-sa         ###   ########.fr       */
+/*   Updated: 2024/10/22 00:57:33 by jaiane           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 # include <stddef.h>
 # include <stdlib.h>
+# include <unistd.h>
 
 int	ft_isalpha(char c);
 int	ft_isdigit(char c);
@@ -30,5 +31,8 @@ size_t	ft_strlcat(char *dest, const char *src, size_t dest_size);
 char	*ft_strdup(const char *s);
 char	*ft_substr(char const *s, unsigned int start, size_t len);
 char    *ft_strtrim(char const *s1, char const *set);
+void	ft_putchar_fd(char c, int fd);
+void	ft_putstr_fd(char *s, int fd);
+void	ft_putendl_fd(char *s, int fd);
 
 #endif //LIBFT_H
