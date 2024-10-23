@@ -6,12 +6,14 @@
 /*   By: jaiane <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/15 22:15:37 by jaiane            #+#    #+#             */
-/*   Updated: 2024/10/15 22:19:20 by jaiane           ###   ########.fr       */
+/*   Updated: 2024/10/23 08:20:38 by jaiane           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-// checks for an alphabetic character 
+
+/* Checks for an alphabetic character 					      */
 
 #include "libft.h"
+
 int	ft_isalpha(char c)
 {
 	if ((c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z'))

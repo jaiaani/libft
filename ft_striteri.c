@@ -6,15 +6,17 @@
 /*   By: jados-sa <jados-sa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/20 22:23:20 by jados-sa          #+#    #+#             */
-/*   Updated: 2024/10/20 23:13:48 by jados-sa         ###   ########.fr       */
+/*   Updated: 2024/10/23 09:01:17 by jaiane           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-/*Applies the function 'f' on each character of the string passed as argument,
- * passing its index as first argument. Each character is passed by
- * address to 'f' to be modified if necessary
- * Parameters:
- * s: The string on which to iterate.
- * f: The function to apply to each character */
+
+/*Applies the function 'f' on each character of the string passed as argument,*
+ * passing its index as first argument. Each character is passed by           *
+ * address to 'f' to be modified if necessary                                 *
+ * s: The string on which to iterate.                                         *
+ * f: The function to apply to each character                                 */
+
+#include "libft.h"
 
 void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 {
@@ -30,18 +32,24 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 	}
 }
 
-void	putstr(char *s)
-{
-	int	i;
+/*#include <stdio.h>
 
-	i = 0;
-	while (s[i])
-		i++;
-	write (1, s, i);
+void	sample_function(unsigned int index, char *c)
+{
+    // Exemplo de função que transforma caracteres em maiúsculas
+    if (*c >= 'a' && *c <= 'z')
+        *c -= 32;
 }
 
-int	main(void)
+int main(void)
 {
-	
-}
-
+    char str[] = "hello world";
+    
+    printf("Original string: %s\n", str);
+    
+    ft_striteri(str, sample_function);
+    
+    printf("Modified string: %s\n", str);
+    
+    return 0;
+}*/

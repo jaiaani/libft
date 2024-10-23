@@ -6,9 +6,10 @@
 /*   By: jados-sa <jados-sa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/18 21:05:06 by jados-sa          #+#    #+#             */
-/*   Updated: 2024/10/19 02:48:25 by jados-sa         ###   ########.fr       */
+/*   Updated: 2024/10/23 10:53:57 by jaiane           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 /* Parameters:
  * s: The string from which to create the substring.
  * start: The start index of the substring in the string 's'.
@@ -19,8 +20,8 @@
  * Allocates (with malloc(3)) and returns a substring from the string 's'.
  * The substring begins at index 'start' and is of maximum size 'len'.
  */
+
 #include "libft.h"
-#include <stdlib.h>
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
@@ -34,7 +35,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	count = 0;
 	sub = malloc(sizeof(char) * len + 1);
 	if (!sub)
-		return NULL;
+		return (NULL);
 	while (s[i] && count < len)
 	{
 		sub[count] = s[i];

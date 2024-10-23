@@ -6,28 +6,30 @@
 /*   By: jaiane <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/18 02:23:37 by jaiane            #+#    #+#             */
-/*   Updated: 2024/10/18 03:43:57 by jaiane           ###   ########.fr       */
+/*   Updated: 2024/10/23 10:39:01 by jaiane           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-/* convert a string to an interger
- * Convertes the initial portion of the string pointed to by nptr to int.
-  Does not detect errors.*/
+
+/* Convert a string to an interger					      *	
+ * Convertes the initial portion of the string pointed to by nptr to int.     *
+ * Does not detect errors.						      */
+
 #include "libft.h"
 
-int	is_space(char c)
+static int	is_space(char c)
 {
-	return (c ==' ' || c =='\n' || c == '\t');
+	return (c == ' ' || c == '\n' || c == '\t');
 }
 
-int	is_signal(char c)
+static int	is_signal(char c)
 {
 	return (c == '-' || c == '+');
 }
 
 int	ft_atoi(const char *nptr)
 {
-	int	x;
-	int	s;
+	int		x;
+	int		s;
 	size_t	i;
 
 	x = 0;
@@ -39,15 +41,15 @@ int	ft_atoi(const char *nptr)
 		s = -1;
 	if (is_signal(nptr[i]))
 		i++;
-       	while (ft_isdigit(nptr[i]))
+	while (ft_isdigit(nptr[i]))
 	{
 		x = x * 10 + (nptr[i] - 48);
-	   	i++;
+		i++;
 	}
 	x *= s;
 	return (x);
 }
-
+/*
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -58,4 +60,4 @@ int	main(int argc, char *argv[])
 		printf("mine: %d\n", ft_atoi(argv[1]));
 		printf("original: %d\n", atoi(argv[1]));
 	}
-}
+}*/
