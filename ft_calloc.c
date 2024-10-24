@@ -3,12 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jaiane <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: jados-sa <jados-sa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/22 01:59:17 by jaiane            #+#    #+#             */
-/*   Updated: 2024/10/23 10:42:59 by jaiane           ###   ########.fr       */
+/*   Created: 2024/10/23 21:17:55 by jados-sa          #+#    #+#             */
+/*   Updated: 2024/10/23 21:17:58 by jados-sa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 
 /* A memory allocator							      *	
  * Shall allocate unused space for an array of 'nelem' elements each of whose *
@@ -23,7 +24,7 @@ void	*ft_calloc(size_t nelem, size_t elsize)
 
 	if (nelem == 0 || elsize == 0)
 		return (malloc(0));
-	t_size = nelem * elsize;
+	tsize = nelem * elsize;
 	if (tsize / elsize != nelem)
 		return (NULL);
 	space = malloc(tsize);

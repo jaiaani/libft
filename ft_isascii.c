@@ -6,14 +6,15 @@
 /*   By: jados-sa <jados-sa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/25 18:58:37 by jados-sa          #+#    #+#             */
-/*   Updated: 2024/10/15 22:24:27 by jaiane           ###   ########.fr       */
+/*   Updated: 2024/10/23 21:16:59 by jados-sa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include "libft.h"
 
 int	ft_isascii(unsigned char c)
 {
-	if (c > 0 && c <= 127)
+	if (c >= 0 && c <= 127)
 		return (1);
 	return (0);
 }

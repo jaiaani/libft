@@ -21,7 +21,8 @@ void	ft_putendl_fd(char *s, int fd)
 	ft_putchar_fd('\n', fd);
 }
 
-int	main(void)
+/*int	main(void)
 {
 	ft_putendl_fd("Hii should break line", 1);
 }
+*/

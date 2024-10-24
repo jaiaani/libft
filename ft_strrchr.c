@@ -6,7 +6,7 @@
 /*   By: jaiane <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/16 22:44:43 by jaiane            #+#    #+#             */
-/*   Updated: 2024/10/23 09:55:38 by jaiane           ###   ########.fr       */
+/*   Updated: 2024/10/23 21:04:26 by jados-sa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ char	*ft_strrchr(const char *s, int c)
 	char	chr;
 	int		i;
 
-	chr = (char)c;
+	chr = (unsigned char)c;
 	i = ft_strlen(s) + 1;
 	while (i >= 0)
 	{
@@ -31,11 +31,13 @@ char	*ft_strrchr(const char *s, int c)
 	}
 	return (NULL);
 }
-/*
+
+/*#include <stdio.h>
+#include <string.h>
 int	main(void)
 {
-	char a[] = "banana";
+	char s[] = "tripouille";
 
-	printf("mine: %s\n", ft_strrchr(a, 'n'));
-	printf("original: %s\n", strrchr(a, 'n'));
+	printf("mine: :%s:\n", ft_strrchr(s, 'l'));
+	printf("original: :%s:\n", strrchr(s, 'l'));
 }*/
