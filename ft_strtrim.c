@@ -35,8 +35,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 {
 	size_t	b;
 	size_t	e;
-	size_t	qnty;
-
+	size_t 	qnty;
 	b = 0;
 	e = ft_strlen(s1) - 1;
 	while (is_set(set, s1[b]))

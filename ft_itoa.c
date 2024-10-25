@@ -34,8 +34,6 @@ int	number_length(int n)
 	}
 	return (i);
 }
-/*
-#include <stdio.h>
 
 char	*ft_itoa(int n)
 {
@@ -67,10 +65,3 @@ char	*ft_itoa(int n)
 	a[n_len] = '\0';
 	return (a);
 }
-
-
-int	main(void)
-{
-	printf("number len: %d\n", number_length(100));
-	printf("string: %s\n", ft_itoa(-1));
-}*/

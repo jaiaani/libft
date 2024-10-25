@@ -18,7 +18,8 @@
 
 static int	is_space(char c)
 {
-	return (c == ' ' || c == '\n' || c == '\t');
+	return (c == ' ' || c == '\n' || c == '\t'
+		|| c == '\v' || c == '\f' || c == '\r');
 }
 
 static int	is_signal(char c)

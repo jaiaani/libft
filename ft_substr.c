@@ -27,21 +27,26 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	size_t	i;
 	size_t	count;
+	size_t	rlen;
 	char	*sub;
 
-	if (start > ft_strlen(s))
+	if (start >= ft_strlen(s))
 		return (ft_strdup(""));
-	i = start;
-	count = 0;
-	sub = malloc(sizeof(char) * len + 1);
+	rlen = ft_strlen(s + start);
+	if (rlen > len)
+		rlen = len;
+	sub = malloc(sizeof(char) * rlen + 1);
 	if (!sub)
 		return (NULL);
-	while (s[i] && count < len)
+	i = start;
+	count = 0;
+	while (s[i] && count < rlen)
 	{
 		sub[count] = s[i];
 		i++;
 		count++;
 	}
+	sub[count] = '\0';
 	return (sub);
 }
 /*
