@@ -6,9 +6,12 @@
 /*   By: jados-sa <jados-sa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/25 18:58:37 by jados-sa          #+#    #+#             */
-/*   Updated: 2024/10/23 21:16:59 by jados-sa         ###   ########.fr       */
+/*   Updated: 2024/10/25 11:55:38 by jaiane           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+/* Checks wheter c is a 7-bit unsigned char value that fits into ASCII        *
+ * character set.							      */
 
 #include "libft.h"
 
