@@ -6,9 +6,12 @@
 /*   By: jados-sa <jados-sa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/25 19:04:27 by jados-sa          #+#    #+#             */
-/*   Updated: 2024/10/23 21:17:06 by jados-sa         ###   ########.fr       */
+/*   Updated: 2024/10/25 11:59:52 by jaiane           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+/* Check for any printable character including space.			      */	
+
 #include "libft.h"
 
 int	ft_isprint(char c)
@@ -17,15 +20,3 @@ int	ft_isprint(char c)
 		return (1);
 	return (0);
 }
-
-/*#include <stdio.h>
-#include <ctype.h>
-
-int	main(void)
-{
-	printf("%d\n", ft_isprint('\n'));
-	printf("%d\n", isprint('\n'));
-	printf("%d\n", ft_isprint('2'));
-        printf("%d\n", isprint('2'));
-        return (0);
-}*/
