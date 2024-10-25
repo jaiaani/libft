@@ -6,16 +6,17 @@
 /*   By: jados-sa <jados-sa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/20 19:46:17 by jados-sa          #+#    #+#             */
-/*   Updated: 2024/10/20 21:48:29 by jados-sa         ###   ########.fr       */
+/*   Updated: 2024/10/25 12:02:09 by jaiane           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-/* Allocates with mallloc() and returns a string represenyting the integer
- * received as an argument. Negative numbers must be handled
- * Paramenters:
- * n: the number to convert*/
+
+/* Allocates with mallloc() and returns a string represenyting the integer    *
+ * received as an argument. Negative numbers must be handled     	      *
+ * n: the number to convert						      */
+
 #include "libft.h"
 
-int	number_length(int n)
+static int	number_length(int n)
 {
 	int	i;
 
@@ -38,30 +39,26 @@ int	number_length(int n)
 char	*ft_itoa(int n)
 {
 	char	*a;
-	int	i;
-	int	n_len;
-	int	b;
+	int		nlen;
+	int		s;
 
 	if (n == -2147483648)
-        	return (ft_strdup("-2147483648"));
-	b = 0;
-	n_len = number_length(n);
-	a = (char *)malloc((n_len + 1) * sizeof(char));
+		return (ft_strdup("-2147483648"));
+	s = (n < 0);
+	nlen = number_length(n);
+	a = (char *) malloc ((nlen + 1) * sizeof(char));
 	if (!a)
 		return (NULL);
-	i = n_len - 1;
-	if (n < 0)
+	a[nlen] = '\0';
+	if (s)
 	{
 		a[0] = '-';
-		n *= -1;
-		b = 1;
+		n = -n;
 	}
-	while (i >= b)
+	while (--nlen >= s)
 	{
-		a[i] = (n % 10) + 48;
+		a[nlen] = (n % 10) + '0';
 		n /= 10;
-		i--;
 	}
-	a[n_len] = '\0';
 	return (a);
 }
