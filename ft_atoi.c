@@ -6,13 +6,14 @@
 /*   By: jados-sa <jados-sa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/23 21:14:58 by jados-sa          #+#    #+#             */
-/*   Updated: 2024/10/23 21:15:20 by jados-sa         ###   ########.fr       */
+/*   Updated: 2024/10/24 23:01:19 by jaiane           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /* Convert a string to an interger					      *	
  * Convertes the initial portion of the string pointed to by nptr to int.     *
- * Does not detect errors.						      */
+ * Does not detect errors.						      *
+ * Return the converted value or 0 on error				      */
 
 #include "libft.h"
 
@@ -44,7 +45,7 @@ int	ft_atoi(const char *nptr)
 		i++;
 	while (ft_isdigit(nptr[i]))
 	{
-		x = x * 10 + (nptr[i] - 48);
+		x = x * 10 + (nptr[i] - '0');
 		i++;
 	}
 	x *= s;
