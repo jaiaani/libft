@@ -6,7 +6,7 @@
 /*   By: jados-sa <jados-sa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/14 18:24:23 by jados-sa          #+#    #+#             */
-/*   Updated: 2024/10/23 20:44:03 by jados-sa         ###   ########.fr       */
+/*   Updated: 2024/10/25 13:17:34 by jaiane           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,7 @@ void	ft_putstr_fd(char *s, int fd);
 void	ft_putendl_fd(char *s, int fd);
 void	ft_putnbr_fd(int n, int fd);
 void	ft_bzero(void *s, size_t n);
-void	*ft_memset(void *dest, int c, size_t count);
+void	*ft_memset(void *s, int c, size_t count);
 void	*ft_calloc(size_t nelem, size_t elsize);
 void	*ft_memmove(void *dest, const void *src, size_t n);
 void	*ft_memcpy(void *dest, const void *src, size_t n);
