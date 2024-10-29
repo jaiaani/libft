@@ -6,7 +6,7 @@
 /*   By: jados-sa <jados-sa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/18 21:05:06 by jados-sa          #+#    #+#             */
-/*   Updated: 2024/10/24 22:12:06 by jaiane           ###   ########.fr       */
+/*   Updated: 2024/10/29 19:22:49 by jados-sa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,45 +25,19 @@
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	size_t	i;
-	size_t	count;
 	size_t	rlen;
 	char	*sub;
 
+	if (!s)
+		return (NULL);
 	if (start >= ft_strlen(s))
 		return (ft_strdup(""));
 	rlen = ft_strlen(s + start);
 	if (rlen > len)
 		rlen = len;
-	sub = malloc(sizeof(char) * rlen + 1);
+	sub = malloc(sizeof(char) * (rlen + 1));
 	if (!sub)
 		return (NULL);
-	i = start;
-	count = 0;
-	while (s[i] && count < rlen)
-	{
-		sub[count] = s[i];
-		i++;
-		count++;
-	}
-	sub[count] = '\0';
+	ft_strlcpy(sub, s + start, (rlen + 1));
 	return (sub);
 }
-/*
-#include <stdio.h>
-int main() {
-    char *str = "Hey i am your substring";
-    char *substr;
-
-    substr = ft_substr(str, 5, 0);
-    if (!substr) {
-        printf("Allocation failed.\n");
-        return 1;
-    }
-
-    printf("Substring: %s\n", substr);
-
-    free(substr);
-
-    return 0;
-}*/

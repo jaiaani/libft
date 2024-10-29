@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jaiane <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: jados-sa <jados-sa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/22 00:58:43 by jaiane            #+#    #+#             */
-/*   Updated: 2024/10/29 12:39:54 by jaiane           ###   ########.fr       */
+/*   Created: 2024/10/29 19:39:48 by jados-sa          #+#    #+#             */
+/*   Updated: 2024/10/29 19:42:15 by jados-sa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,6 +37,5 @@ void	ft_putnbr_fd(int n, int fd)
 		ft_putchar_fd((n % 10) + '0', fd);
 	}
 	else
-                ft_putchar_fd(n + '0', fd);
-
+		ft_putchar_fd(n + '0', fd);
 }

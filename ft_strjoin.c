@@ -6,7 +6,7 @@
 /*   By: jados-sa <jados-sa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/18 22:05:38 by jados-sa          #+#    #+#             */
-/*   Updated: 2024/10/29 12:47:28 by jaiane           ###   ########.fr       */
+/*   Updated: 2024/10/29 19:25:04 by jados-sa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,8 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	char	*join;
 	size_t	total_len;
 
+	if (!s1 || !s2)
+		return (NULL);
 	total_len = ft_strlen(s1) + ft_strlen(s2);
 	join = malloc(sizeof(char) * (total_len + 1));
 	if (!join)

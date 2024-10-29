@@ -6,7 +6,7 @@
 /*   By: jados-sa <jados-sa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/19 03:49:54 by jados-sa          #+#    #+#             */
-/*   Updated: 2024/10/29 13:34:45 by jaiane           ###   ########.fr       */
+/*   Updated: 2024/10/29 19:43:47 by jados-sa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,8 @@ char	*ft_strtrim(char const *s1, char const *set)
 {
 	size_t	b;
 	size_t	e;
-	size_t 	qnty;
+	size_t	qnty;
+
 	if (!s1 || !set)
 		return (NULL);
 	b = 0;
@@ -45,5 +46,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 	while (is_set(set, s1[e]) && e > b)
 		e--;
 	qnty = e - b + 1;
+	if (qnty == 0)
+		return (ft_strdup(""));
 	return (ft_substr(s1, b, qnty));
 }

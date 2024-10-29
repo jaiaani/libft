@@ -6,7 +6,7 @@
 /*   By: jados-sa <jados-sa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/19 02:27:17 by jados-sa          #+#    #+#             */
-/*   Updated: 2024/10/29 12:44:14 by jaiane           ###   ########.fr       */
+/*   Updated: 2024/10/29 19:42:49 by jados-sa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,8 @@ char	*ft_strdup(const char *s)
 	char	*dup;
 	size_t	i;
 
+	if (!s)
+		return (NULL);
 	dup = malloc(sizeof(char) * (ft_strlen(s) + 1));
 	if (!dup)
 		return (NULL);

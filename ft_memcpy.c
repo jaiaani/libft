@@ -6,7 +6,7 @@
 /*   By: jados-sa <jados-sa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/15 18:18:46 by jados-sa          #+#    #+#             */
-/*   Updated: 2024/10/25 13:12:54 by jaiane           ###   ########.fr       */
+/*   Updated: 2024/10/29 18:40:24 by jados-sa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,15 +23,12 @@ void	*ft_memcpy(void *restrict dest, const void *restrict src, size_t n)
 
 	d = (unsigned char *)dest;
 	s = (unsigned char *)src;
-	if (!dest || !src)
+	if (!dest && !src)
 		return (NULL);
-	if (dest != src)
+	while (n > 0)
 	{
-		while (n > 0)
-		{
-			*d++ = *s++;
-			n--;
-		}
+		*d++ = *s++;
+		n--;
 	}
 	return (dest);
 }

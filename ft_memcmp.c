@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jaiane <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: jados-sa <jados-sa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/17 21:24:58 by jaiane            #+#    #+#             */
-/*   Updated: 2024/10/25 13:06:01 by jaiane           ###   ########.fr       */
+/*   Created: 2024/10/29 19:03:43 by jados-sa          #+#    #+#             */
+/*   Updated: 2024/10/29 19:07:03 by jados-sa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	while (i < n)
 	{
 		if (str1[i] != str2[i])
-			return (str1[i] - str2[i]);
+			return ((int)(str1[i] - str2[i]));
 		i++;
 	}
 	return (0);

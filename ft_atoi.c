@@ -6,7 +6,7 @@
 /*   By: jados-sa <jados-sa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/23 21:14:58 by jados-sa          #+#    #+#             */
-/*   Updated: 2024/10/24 23:01:19 by jaiane           ###   ########.fr       */
+/*   Updated: 2024/10/29 19:11:14 by jados-sa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,15 +51,3 @@ int	ft_atoi(const char *nptr)
 	x *= s;
 	return (x);
 }
-/*
-#include <stdio.h>
-#include <stdlib.h>
-
-int	main(int argc, char *argv[])
-{
-	if (argc > 1)
-	{
-		printf("mine: %d\n", ft_atoi(argv[1]));
-		printf("original: %d\n", atoi(argv[1]));
-	}
-}*/

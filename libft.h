@@ -6,7 +6,7 @@
 /*   By: jados-sa <jados-sa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/14 18:24:23 by jados-sa          #+#    #+#             */
-/*   Updated: 2024/10/25 13:17:34 by jaiane           ###   ########.fr       */
+/*   Updated: 2024/10/29 19:21:48 by jados-sa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ int		ft_isascii(unsigned char c);
 int		ft_isprint(char c);
 int		ft_toupper(int c);
 int		ft_tolower(int c);
-int		ft_strncmp(char *s1, char *s2, unsigned int n);
+int		ft_strncmp(const char *s1, const char *s2, size_t n);
 int		ft_memcmp(const void *s1, const void *s2, size_t n);
 int		ft_atoi(const char *nptr);
 size_t	ft_strlcat(char *dst, const char *src, size_t size);

@@ -6,10 +6,9 @@
 /*   By: jados-sa <jados-sa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/23 21:17:55 by jados-sa          #+#    #+#             */
-/*   Updated: 2024/10/25 11:47:31 by jaiane           ###   ########.fr       */
+/*   Updated: 2024/10/29 19:41:27 by jados-sa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 
 /* A memory allocator							      *	
  * Shall allocate unused space for an array of 'nelem' elements each of whose *
