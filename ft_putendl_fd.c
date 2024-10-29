@@ -6,7 +6,7 @@
 /*   By: jaiane <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/22 00:49:08 by jaiane            #+#    #+#             */
-/*   Updated: 2024/10/22 00:54:58 by jaiane           ###   ########.fr       */
+/*   Updated: 2024/10/29 12:36:48 by jaiane           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,9 +20,3 @@ void	ft_putendl_fd(char *s, int fd)
 	ft_putstr_fd(s, fd);
 	ft_putchar_fd('\n', fd);
 }
-
-/*int	main(void)
-{
-	ft_putendl_fd("Hii should break line", 1);
-}
-*/
