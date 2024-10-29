@@ -6,11 +6,11 @@
 /*   By: jaiane <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/24 21:00:02 by jaiane            #+#    #+#             */
-/*   Updated: 2024/10/25 13:14:01 by jaiane           ###   ########.fr       */
+/*   Updated: 2024/10/29 09:06:14 by jaiane           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/* Copy memory area
+/* Copy memory area							      *	
  * COpies n bytes from memory area src to memory area dest. The memory area   *
  * may overlap: copying takes place as though the bytes in src are first      *
  * copied into a temporary array that does not overlap src or dest, and the   *
@@ -32,7 +32,7 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 		while (n--)
 			*d++ = *s++;
 	}
-	if (d > s)
+	else
 	{
 		d += n;
 		s += n;
