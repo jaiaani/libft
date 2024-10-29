@@ -6,7 +6,7 @@
 /*   By: jaiane <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/16 22:44:43 by jaiane            #+#    #+#             */
-/*   Updated: 2024/10/23 21:04:26 by jados-sa         ###   ########.fr       */
+/*   Updated: 2024/10/29 13:27:31 by jaiane           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,13 +31,3 @@ char	*ft_strrchr(const char *s, int c)
 	}
 	return (NULL);
 }
-
-/*#include <stdio.h>
-#include <string.h>
-int	main(void)
-{
-	char s[] = "tripouille";
-
-	printf("mine: :%s:\n", ft_strrchr(s, 'l'));
-	printf("original: :%s:\n", strrchr(s, 'l'));
-}*/
