@@ -6,18 +6,20 @@
 /*   By: jados-sa <jados-sa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/20 16:47:47 by jados-sa          #+#    #+#             */
-/*   Updated: 2024/10/20 20:21:06 by jados-sa         ###   ########.fr       */
+/*   Updated: 2024/10/29 12:42:11 by jaiane           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-/* Allocates with malloc() and returns an array of strings obtained by 
- * splitting 's' using the character as a delimiter. The array must end
- * with a NULL pointer.
- * Parameters:
- * s: the string to be slipt
- * c: the delimiter character. */
+
+/* Allocates with malloc() and returns an array of strings obtained by 	      *
+ * splitting 's' using the character as a delimiter. The array must end       *
+ * with a NULL pointer.    						      *
+ * Parameters: 								      *
+ * s: the string to be slipt						      *
+ * c: the delimiter character. 						      */
+
 #include "libft.h" 
 
-size_t	count_tokens(char const *s, char c)
+static size_t	count_tokens(char const *s, char c)
 {
 	int		tokens;
 	int		inside_token;
@@ -41,7 +43,7 @@ size_t	count_tokens(char const *s, char c)
 	return (tokens);
 }
 
-size_t	token_len(char const *s, char c)
+static size_t	token_len(char const *s, char c)
 {
 	size_t	len;
 
@@ -51,7 +53,7 @@ size_t	token_len(char const *s, char c)
 	return (len + 1);
 }
 
-char	**insert_token(size_t *i, char **list, char const *s, char c)
+static char	**insert_token(size_t *i, char **list, char const *s, char c)
 {
 	list[*i] = (char *)malloc(token_len(s, c) * sizeof(char));
 	if (!list[*i])
@@ -89,15 +91,3 @@ char	**ft_split(char const *s, char c)
 	strs[i] = 0;
 	return (strs);
 }
-
-/*#include <stdio.h>
-
-int	main(void)
-{
-	char	**split;
-
-	split = ft_split("Hii should be 4", ' ');
-
-	for (int i = 0; i < 4; i++)
-		printf("%s\n", split[i]);
-}*/
