@@ -6,13 +6,16 @@
 /*   By: jaiane <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/16 00:45:45 by jaiane            #+#    #+#             */
-/*   Updated: 2024/10/16 22:13:13 by jaiane           ###   ########.fr       */
+/*   Updated: 2024/10/29 13:05:40 by jaiane           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-/* concatenate strings respectively.
- * Take the full size of the buffer (not just the length) and guarantee to 
+
+/* Concatenate strings respectively.					      *
+ * Take the full size of the buffer (not just the length) and guarantee to    *
  * NUL-terminate the result (as long as there is at least one byte free in dst)
- * BOth src and dst must be NUL-terminated */
+ * BOth src and dst must be NUL-terminated 				      *
+ * Returns the total length of the string they tried to create, that means    *
+ * the initial lenth of dest plus length of src. 			      */	
 
 #include "libft.h"
 
@@ -40,29 +43,3 @@ size_t	ft_strlcat(char *dest, const char *src, size_t size)
 		return (src_len + size);
 	return (src_len + dest_len);
 }
-
-/*
-size_t	ft_strlcat(char *dest, const char *src, size_t length)
-{
-	size_t	dsize;
-	size_t	ssize;
-	size_t	i;
-	size_t	j;
-
-	if (!dest && !length)
-		return (0);
-	dsize = ft_strlen(dest);
-	ssize = ft_strlen(src);
-	i = dsize;
-	j = 0;
-	while ((i < length - 1) && (src[j]) && (length > 0))
-	{
-		dest[i] = src[j];
-		i++;
-		j++;
-	}
-	dest[i] = '\0';
-	if (length < i)
-		return (ssize + length);
-	return (ssize + dsize);
-}*/
