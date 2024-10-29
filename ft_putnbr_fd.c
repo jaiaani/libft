@@ -6,7 +6,7 @@
 /*   By: jaiane <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/22 00:58:43 by jaiane            #+#    #+#             */
-/*   Updated: 2024/10/23 10:52:39 by jaiane           ###   ########.fr       */
+/*   Updated: 2024/10/29 12:39:54 by jaiane           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,11 +31,12 @@ void	ft_putnbr_fd(int n, int fd)
 		s = -1;
 	}
 	n *= s;
-	if (n < 10)
-		ft_putchar_fd(n + 48, fd);
 	if (n > 9)
 	{
 		ft_putnbr_fd(n / 10, fd);
-		ft_putchar_fd((n % 10) + 48, fd);
+		ft_putchar_fd((n % 10) + '0', fd);
 	}
+	else
+                ft_putchar_fd(n + '0', fd);
+
 }
