@@ -6,7 +6,7 @@
 /*   By: jados-sa <jados-sa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/20 22:23:20 by jados-sa          #+#    #+#             */
-/*   Updated: 2024/10/23 21:18:30 by jados-sa         ###   ########.fr       */
+/*   Updated: 2024/10/29 12:45:14 by jaiane           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,25 +31,3 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 		i++;
 	}
 }
-
-/*#include <stdio.h>
-
-void	sample_function(unsigned int index, char *c)
-{
-    // Exemplo de função que transforma caracteres em maiúsculas
-    if (*c >= 'a' && *c <= 'z')
-        *c -= 32;
-}
-
-int main(void)
-{
-    char str[] = "hello world";
-    
-    printf("Original string: %s\n", str);
-    
-    ft_striteri(str, sample_function);
-    
-    printf("Modified string: %s\n", str);
-    
-    return 0;
-}*/
