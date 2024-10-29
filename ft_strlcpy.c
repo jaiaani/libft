@@ -6,13 +6,14 @@
 /*   By: jaiane <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/15 23:01:44 by jaiane            #+#    #+#             */
-/*   Updated: 2024/10/16 00:41:18 by jaiane           ###   ########.fr       */
+/*   Updated: 2024/10/29 13:07:24 by jaiane           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/* Copy strings. Take the full size of the buffer (not just the length) and 
- * guarantee to NUL-terminate the result (as long as size is larger than 0)
- * Note that a byte for the NUL shoud be included in size. 
+/* Copy strings.							      * 
+ * Take the full size of the buffer (not just the length) and 		      *
+ * guarantee to NUL-terminate the result (as long as size is larger than 0)   *
+ * Note that a byte for the NUL shoud be included in size. 		      *
  * Only operate on true 'C' strings, so the src must be NUL-terminated        */
 
 #include "libft.h"
