@@ -6,7 +6,7 @@
 /*   By: jados-sa <jados-sa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/18 22:05:38 by jados-sa          #+#    #+#             */
-/*   Updated: 2024/10/23 09:13:05 by jaiane           ###   ########.fr       */
+/*   Updated: 2024/10/29 12:47:28 by jaiane           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,19 +24,10 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	size_t	total_len;
 
 	total_len = ft_strlen(s1) + ft_strlen(s2);
-	join = malloc(sizeof(char) * total_len + 1);
+	join = malloc(sizeof(char) * (total_len + 1));
 	if (!join)
 		return (NULL);
 	ft_strlcpy(join, s1, ft_strlen(s1) + 1);
 	ft_strlcat(join, s2, total_len + 1);
 	return (join);
 }
-/*
-#include <stdio.h> 
-
-int	main(void)
-{
-	printf("%s", ft_strjoin("join me ", "please"));	
-
-}
-*/
