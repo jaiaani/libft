@@ -25,6 +25,8 @@ static size_t	count_tokens(char const *s, char c)
 	int		inside_token;
 
 	tokens = 1;
+	if (!s)
+		return (0);
 	while (*s)
 	{
 		inside_token = 0;
@@ -71,7 +73,7 @@ char	**ft_split(char const *s, char c)
 
 	strs = (char **) malloc (count_tokens(s, c) * sizeof (char *));
 	i = 0;
-	if (!strs)
+	if (!s || !strs)
 		return (NULL);
 	while (*s)
 	{
