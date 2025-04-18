@@ -19,7 +19,7 @@
 
 #include "libft.h" 
 
-static size_t	count_tokens(char const *s, char c)
+static size_t	count_tokens(char *s, char c)
 {
 	int		tokens;
 	int		inside_token;
@@ -45,7 +45,7 @@ static size_t	count_tokens(char const *s, char c)
 	return (tokens);
 }
 
-static size_t	token_len(char const *s, char c)
+static size_t	token_len(char *s, char c)
 {
 	size_t	len;
 
@@ -55,7 +55,7 @@ static size_t	token_len(char const *s, char c)
 	return (len + 1);
 }
 
-static char	**insert_token(size_t *i, char **list, char const *s, char c)
+static char	**insert_token(size_t *i, char **list, char *s, char c)
 {
 	list[*i] = (char *)malloc(token_len(s, c) * sizeof(char));
 	if (!list[*i])
