@@ -28,7 +28,7 @@ static int	is_signal(char c)
 	return (c == '-' || c == '+');
 }
 
-int	ft_atoi(const char *nptr)
+int	ft_atoi(char *nptr)
 {
 	int		x;
 	int		s;

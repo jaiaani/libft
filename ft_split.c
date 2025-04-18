@@ -65,7 +65,7 @@ static char	**insert_token(size_t *i, char **list, char const *s, char c)
 	return (list);
 }
 
-char	**ft_split(char const *s, char c)
+char	**ft_split(char *s, char c)
 {
 	char	**strs;
 	size_t	i;
